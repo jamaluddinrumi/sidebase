@@ -3,7 +3,7 @@
     "source.fixAll.eslint": true
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Vue.volar"
   },
   "[js]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -12,11 +12,9 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Vue.volar"
   },
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "vue"
-  ]
+  "eslint.validate": ["javascript", "typescript", "vue"],
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true
 }
