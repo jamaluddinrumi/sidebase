@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDoubleRightIcon } from '@heroicons/vue/24/solid'
+import numeral from 'numeral'
 
 interface Total {
   value: string
@@ -27,6 +28,27 @@ interface Order {
 defineProps({
   orders: Array<Order>,
 })
+
+if (numeral.locales.id === undefined) {
+  numeral.register('locale', 'id', {
+    delimiters: {
+      thousands: '.',
+      decimal: ',',
+    },
+    abbreviations: {
+      thousand: 'k',
+      million: 'm',
+      billion: 'b',
+      trillion: 't',
+    },
+    currency: {
+      symbol: 'Rp',
+    },
+  })
+}
+if (numeral.locale() !== 'id') {
+  numeral.locale('id')
+}
 </script>
 
 <template>
@@ -88,10 +110,10 @@ defineProps({
                       >
                         <li class="my-1 first:mt-2 last:mb-2">
                           <div class="font-medium">
-                            ({{ item.quantity }}) {{ item.product.name }}
+                            {{ item.quantity }} unit {{ item.product.name }}
                           </div>
                           <div class="font-light">
-                            Rp{{ item.total.value.replace(/.00$/, "") }}
+                            {{ numeral(item.total.value.replace(/.00$/, '').replace(/,/, '').replace(/,/, '')).format('$0,0') }}
                           </div>
                         </li>
                       </ul>
@@ -102,7 +124,7 @@ defineProps({
               <td
                 class="border border-slate-300 p-4 text-right text-slate-500 dark:border-slate-700 dark:text-slate-400"
               >
-                <span class="font-light">Rp{{ order.amountDue.replace(/.00$/, "") }}</span><br>
+                <span class="font-light">{{ numeral(order.amountDue.replace(/.00$/, '').replace(/,/, '').replace(/,/, '')).format('$0,0') }}</span><br>
               </td>
             </tr>
           </tbody>
