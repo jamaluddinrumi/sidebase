@@ -77,3 +77,6 @@ sw.*
 # Auto generate on postinstall step
 auto-imports.d.ts
 components.d.ts
+
+server.key
+server.crt
