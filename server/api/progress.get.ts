@@ -1,5 +1,3 @@
-import numeral from 'numeral'
-
 export default async (req, res) => {
   const headers = {
     'Authorization': `Bearer ${useRuntimeConfig().API_AUTH_TOKEN}`,
@@ -73,58 +71,35 @@ export default async (req, res) => {
     },
   }
 
-  if (numeral.locales.id === undefined) {
-    numeral.register('locale', 'id', {
-      delimiters: {
-        thousands: '.',
-        decimal: ',',
-      },
-      abbreviations: {
-        thousand: 'k',
-        million: 'm',
-        billion: 'b',
-        trillion: 't',
-      },
-      ordinal(number) {
-        return number === 1 ? 'er' : 'ème'
-      },
-      currency: {
-        symbol: 'Rp',
-      },
-    })
-  }
-  if (numeral.locale() !== 'id')
-    numeral.locale('id')
-
   return await $fetch(useRuntimeConfig().API_URL, {
     method: 'POST',
     headers,
     body: query,
     parseResponse: JSON.parse,
-    async onRequest({ request, options }) {
-      // Log request
-      // console.log("[fetch request]", request, options);
-      // Add `?t=1640125211170` to query params
-      // options.params = options.params;
-      // options.params.t = new Date();
-    },
-    async onRequestError({ request, options, error }) {
-      // Log error
-      // console.log("[fetch request error]", request, error);
-    },
-    async onResponse({ request, response, options }) {
-      // Log response
-      // console.log("[fetch response]", request, response.status, response.body);
-    },
-    async onResponseError({ request, response, options }) {
-      // Log error
-      // console.log(
-      //   "[fetch response error]",
-      //   request,
-      //   response.status,
-      //   response.body
-      // );
-    },
+    // async onRequest({ request, options }) {
+    //   // Log request
+    //   // console.log("[fetch request]", request, options);
+    //   // Add `?t=1640125211170` to query params
+    //   // options.params = options.params;
+    //   // options.params.t = new Date();
+    // },
+    // async onRequestError({ request, options, error }) {
+    //   // Log error
+    //   // console.log("[fetch request error]", request, error);
+    // },
+    // async onResponse({ request, response, options }) {
+    //   // Log response
+    //   // console.log("[fetch response]", request, response.status, response.body);
+    // },
+    // async onResponseError({ request, response, options }) {
+    //   // Log error
+    //   // console.log(
+    //   //   "[fetch response error]",
+    //   //   request,
+    //   //   response.status,
+    //   //   response.body
+    //   // );
+    // },
   })
     .then((data) => {
       // console.log(data);
