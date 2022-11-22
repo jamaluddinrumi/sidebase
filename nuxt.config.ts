@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 
   pwa: {
     workbox: {
-      enabled: false,
+      enabled: true,
     },
     meta: {
       name: 'Progress INDOMASCOT',
