@@ -61,12 +61,12 @@ if (numeral.locale() !== 'id') {
           <thead class="bg-slate-50 dark:bg-slate-700">
             <tr>
               <th
-                class="w-1/2 border border-slate-300 p-4 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200"
+                class="w-1/2 border-y border-l border-slate-300 p-4 text-left font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200"
               >
                 No. Invoice
               </th>
               <th
-                class="w-1/2 border border-slate-300 p-4 text-right font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200"
+                class="w-1/2 border-y border-r border-slate-300 p-4 text-right font-semibold text-slate-900 dark:border-slate-600 dark:text-slate-200"
               >
                 Kekurangan
               </th>
@@ -75,7 +75,7 @@ if (numeral.locale() !== 'id') {
           <tbody v-for="(order, orderIndex) in orders" :key="orderIndex">
             <tr>
               <td
-                class="border border-slate-300 p-4 text-left text-slate-500 dark:border-slate-700 dark:text-slate-400"
+                class="border-y border-l border-slate-300 p-4 text-left text-slate-500 dark:border-slate-700 dark:text-slate-400"
               >
                 <span class="font-semibold"> #{{ order.invoiceNumber }} </span><br>
                 <span class="line-clamp-1 text-xs font-light">{{
@@ -122,7 +122,7 @@ if (numeral.locale() !== 'id') {
                 </Disclosure>
               </td>
               <td
-                class="border border-slate-300 p-4 text-right text-slate-500 dark:border-slate-700 dark:text-slate-400"
+                class="border-y border-r border-slate-300 p-4 text-right text-slate-500 dark:border-slate-700 dark:text-slate-400"
               >
                 <span class="font-light">{{ numeral(order.amountDue.replace(/.00$/, '').replace(/,/, '').replace(/,/, '')).format('$0,0') }}</span><br>
               </td>
