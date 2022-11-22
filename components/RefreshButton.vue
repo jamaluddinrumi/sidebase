@@ -6,8 +6,7 @@ const refreshAll = async () => {
   refreshing.value = true
   try {
     await refreshNuxtData()
-  }
-  finally {
+  } finally {
     refreshing.value = false
   }
 }
@@ -16,12 +15,17 @@ const refreshAll = async () => {
 <template>
   <div class="fixed bottom-[24px] right-[20px] z-[9999]">
     <button :disabled="refreshing" :class="{ loading: refreshing }" class="btn shadow" @click="refreshAll">
-      <ArrowPathIcon :class="refreshing ? 'hidden' : ''" class="h-4 w-4 mr-2" />
+      <ArrowPathIcon :class="refreshing ? 'hidden' : ''" class="mr-2 h-4 w-4" />
       Refresh
     </button>
   </div>
 </template>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.btn-disabled,
+.btn-disabled:hover,
+.btn[disabled],
+.btn[disabled]:hover {
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
 </style>
