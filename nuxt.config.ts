@@ -1,7 +1,7 @@
 import { isProduction } from './helpers'
 
 // Needed to keep `ant-design-vue` running as of latest RC.8, see https://github.com/nuxt/framework/issues/6941#issuecomment-1229739856
-const transpile = ['lodash-es']
+const transpile = ['lodash-es', '@heroicons/vue', '@headlessui/vue']
 if (isProduction) {
   // For production build via rollup, we need to also transpile babel
   transpile.push('@babel/runtime')
