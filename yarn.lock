@@ -344,6 +344,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@builder.io/partytown@^0.7.0":
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.2.tgz#012d0dc5458af07079849f09567fcbf058a72d46"
+  integrity sha512-TmRHuN4gdsOJxBGsPPirJAMuXDm0o9cx9t5ltSson+F+K5ES3eNiBCxBGvSSkoEARvZ+kl1n7WVi+8qNyJdeAQ==
+
 "@capsizecss/metrics@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@capsizecss/metrics/-/metrics-0.3.0.tgz#8c40262c176ee131cee64e2e3d1c6def6f9a1b87"
@@ -598,7 +603,7 @@
   resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-2.0.0.tgz#c7bd7e9a516514e612d5d2e511ffc399e0eac322"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.0.0-rc.12", "@nuxt/kit@^3.0.0-rc.14":
+"@nuxt/kit@3.0.0", "@nuxt/kit@^3.0.0", "@nuxt/kit@^3.0.0-rc.12", "@nuxt/kit@^3.0.0-rc.14", "@nuxt/kit@^3.0.0-rc.9":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-3.0.0.tgz#ae49b4e27b15285556cb88f35a56309c5ca0dd79"
   integrity sha512-7ZsOLt5s9a0ZleAIzmoD70JwkZf5ti6bDdxl6f8ew7Huxz+ni/oRfTPTX9TrORXsgW5CvDt6Q9M7IJNPkAN/Iw==
@@ -834,6 +839,17 @@
     chalk "^5.1.2"
     html-validate "7.7.1"
     prettier "^2.7.1"
+
+"@nuxtjs/partytown@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/partytown/-/partytown-1.2.2.tgz#8ec4ec1e753be6fb5b96f8791b2b405d0f0f13d8"
+  integrity sha512-mev71SBQ9nSpVxn47i83VwMDWFxqzoyt/EWnllMGKEJgAsVWwQUxFkAu06roAb/kV7mTXcQM4GeC/hAgjOdnYQ==
+  dependencies:
+    "@builder.io/partytown" "^0.7.0"
+    "@nuxt/kit" "^3.0.0-rc.9"
+    knitwork "^0.1.2"
+    serve-static "^1.15.0"
+    ufo "^0.8.5"
 
 "@nuxtjs/tailwindcss@^6.1.3":
   version "6.1.3"

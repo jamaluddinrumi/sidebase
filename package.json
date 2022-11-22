@@ -13,6 +13,7 @@
   "dependencies": {
     "@headlessui/vue": "^1.7.4",
     "@heroicons/vue": "^2.0.13",
+    "@nuxtjs/partytown": "^1.2.2",
     "@sidebase/nuxt-parse": "^0.3.0",
     "better-sqlite3": "^7.6.2",
     "daisyui": "^2.41.0",

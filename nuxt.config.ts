@@ -36,11 +36,12 @@ export default defineNuxtConfig({
 
   modules: [
     'nuxt-security',
-    '@kevinmarrec/nuxt-pwa',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/critters',
-    '@nuxtjs/html-validator',
     '@nuxtjs/fontaine',
+    '@nuxtjs/html-validator',
+    '@nuxtjs/partytown',
+    '@kevinmarrec/nuxt-pwa',
   ],
 
   pwa: {
@@ -68,5 +69,5 @@ export default defineNuxtConfig({
 
   tailwindcss: {
     viewer: false,
-  }
+  },
 })
