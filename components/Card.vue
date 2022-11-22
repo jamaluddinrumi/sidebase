@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="bg-[#0070ba] dark:bg-black p-4 text-xl shadow-xl shadow-indigo-100 dark:shadow-none backdrop-blur-xl">
+  <div class="bg-[#0070ba] p-4 text-xl shadow-xl shadow-indigo-100 backdrop-blur-xl dark:bg-black dark:shadow-none">
     <div class="">
       <span class="bg-gradient-to-b from-slate-50 to-slate-200 bg-clip-text text-transparent">
         <table
@@ -30,17 +30,17 @@ defineProps({
               <td
                 class="border border-slate-300 p-4 text-left text-slate-500 dark:border-slate-700 dark:text-slate-400">
                 <span class="font-semibold"> #{{ order.invoiceNumber }} </span><br>
-                <span class="text-xs font-light line-clamp-1">{{
-                    order.customer
+                <span class="line-clamp-1 text-xs font-light">{{
+                order.customer
                 }}</span>
                 <div class="mt-2 text-left text-xs">
                   <span class="mr-0.5 font-medium">untuk</span><br>
                   <span class="font-light">
                     {{
-                        new Date(order.dueDate).toLocaleDateString("id-ID", {
-                          day: "numeric",
-                          month: "long",
-                        })
+                    new Date(order.dueDate).toLocaleDateString("id-ID", {
+                    day: "numeric",
+                    month: "long",
+                    })
                     }}
                   </span>
                 </div>

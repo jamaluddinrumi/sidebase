@@ -10,7 +10,7 @@ export default <Config>{
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui")],
+  plugins: [require('daisyui')],
   daisyui: {
     themes: false,
   },
